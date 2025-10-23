@@ -1,0 +1,135 @@
+{
+  "reg_no": "21BCS0000",
+  "semester": "Fall 2025",
+  "cgpa": 8.5,
+  "marks": [
+    {
+      "course_code": "CSE101",
+      "course_title": "Data Structures",
+      "course_type": "TH",
+      "faculty": "Dr. Smith",
+      "slot": "A1",
+  "class_average": 68.0,
+      "components": [
+        {
+          "title": "CAT-1",
+          "max_marks": 50,
+          "weightage": 15,
+          "status": "Completed",
+          "scored_marks": 40,
+          "weightage_mark": 12
+        },
+        {
+          "title": "CAT-2",
+          "max_marks": 50,
+          "weightage": 15,
+          "status": "Completed",
+          "scored_marks": 45,
+          "weightage_mark": 13.5
+        },
+        {
+          "title": "Assignment",
+          "max_marks": 100,
+          "weightage": 10,
+          "status": "Completed",
+          "scored_marks": 90,
+          "weightage_mark": 9
+        }
+      ],
+      "total_scored": 34.5,
+      "total_weight": 40
+    }
+  ],
+  "attendance": [
+    {
+      "course_code": "CSE101",
+      "course_name": "Data Structures",
+      "course_type": "TH",
+      "faculty": "Dr. Smith",
+      "attended": 36,
+      "total": 40,
+      "percentage": 90,
+      "buffer": 6,
+      "last_updated_at": "2025-09-15"
+    }
+  ],
+  "exams": [
+    {
+      "course_code": "CSE101",
+      "course_name": "Data Structures",
+      "exam_type": "FAT",
+      "date": "2025-10-25",
+      "start_time": "09:00",
+      "end_time": "12:00",
+      "venue": "AB1-201"
+    }
+  ],
+  "timetable": [
+    {
+      "day": "Monday",
+      "start_time": "09:00",
+      "end_time": "10:00",
+      "course": "Data Structures",
+      "course_code": "CSE101",
+      "slot": "A1",
+      "venue": "AB1-201",
+      "faculty": "Dr. Smith"
+    }
+  ],
+  "assignments": [
+    {
+      "course_code": "CSE101",
+      "course_name": "Data Structures",
+      "title": "Project",
+      "due_date": "2025-10-20",
+      "status": "Pending",
+      "link": "https://vit.ac.in"
+    }
+  ],
+  "leaves": [],
+  "cgpa_trend": [
+    {
+      "semester": "Fall 2024",
+      "cgpa": 8.2,
+      "credits_registered": 24,
+      "credits_earned": 24,
+      "s_grades": 2,
+      "a_grades": 3,
+      "b_grades": 1,
+      "c_grades": 0,
+      "d_grades": 0,
+      "e_grades": 0,
+      "f_grades": 0,
+      "n_grades": 0
+    },
+    {
+      "semester": "Winter 2025",
+      "cgpa": 8.4,
+      "credits_registered": 24,
+      "credits_earned": 24,
+      "s_grades": 1,
+      "a_grades": 4,
+      "b_grades": 1,
+      "c_grades": 0,
+      "d_grades": 0,
+      "e_grades": 0,
+      "f_grades": 0,
+      "n_grades": 0
+    },
+    {
+      "semester": "Fall 2025",
+      "cgpa": 8.5,
+      "credits_registered": 24,
+      "credits_earned": 24,
+      "s_grades": 2,
+      "a_grades": 3,
+      "b_grades": 1,
+      "c_grades": 0,
+      "d_grades": 0,
+      "e_grades": 0,
+      "f_grades": 0,
+      "n_grades": 0
+    }
+  ],
+  "generated_at": "2025-10-10T10:00:00"
+}

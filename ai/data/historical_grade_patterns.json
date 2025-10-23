@@ -1,0 +1,1096 @@
+{
+  "semesters": {
+    "Fall Semester 2023-24": [
+      {
+        "course_code": "BCHY101L",
+        "course_name": "Engineering Chemistry",
+        "subject_type": "CORE_ENGG",
+        "total_marks": 65,
+        "internal_marks": 39.0,
+        "internal_percentage": 65.0,
+        "fat_marks": 26.0,
+        "grade": "C",
+        "semester": "Fall Semester 2023-24"
+      },
+      {
+        "course_code": "BCHY101P",
+        "course_name": "Engineering Chemistry Lab",
+        "subject_type": "LAB",
+        "total_marks": 92,
+        "internal_marks": 55.2,
+        "internal_percentage": 92.0,
+        "fat_marks": 36.8,
+        "grade": "S",
+        "semester": "Fall Semester 2023-24"
+      },
+      {
+        "course_code": "BCSE101E",
+        "course_name": "Computer Programming: Python",
+        "subject_type": "CORE_CSE",
+        "total_marks": 82,
+        "internal_marks": 49.2,
+        "internal_percentage": 82.0,
+        "fat_marks": 32.8,
+        "grade": "A",
+        "semester": "Fall Semester 2023-24"
+      },
+      {
+        "course_code": "BMAT101L",
+        "course_name": "Calculus",
+        "subject_type": "MATH",
+        "total_marks": 62,
+        "internal_marks": 37.2,
+        "internal_percentage": 62.0,
+        "fat_marks": 24.8,
+        "grade": "C",
+        "semester": "Fall Semester 2023-24"
+      },
+      {
+        "course_code": "BMAT101P",
+        "course_name": "Calculus Lab",
+        "subject_type": "LAB",
+        "total_marks": 92,
+        "internal_marks": 55.2,
+        "internal_percentage": 92.0,
+        "fat_marks": 36.8,
+        "grade": "S",
+        "semester": "Fall Semester 2023-24"
+      },
+      {
+        "course_code": "BPHY101L",
+        "course_name": "Engineering Physics",
+        "subject_type": "CORE_ENGG",
+        "total_marks": 59,
+        "internal_marks": 35.4,
+        "internal_percentage": 59.0,
+        "fat_marks": 23.6,
+        "grade": "C",
+        "semester": "Fall Semester 2023-24"
+      },
+      {
+        "course_code": "BPHY101P",
+        "course_name": "Engineering Physics Lab",
+        "subject_type": "LAB",
+        "total_marks": 93,
+        "internal_marks": 55.8,
+        "internal_percentage": 93.0,
+        "fat_marks": 37.2,
+        "grade": "S",
+        "semester": "Fall Semester 2023-24"
+      },
+      {
+        "course_code": "BSTS201P",
+        "course_name": "Qualitative Skills Practice I",
+        "subject_type": "LAB",
+        "total_marks": 71,
+        "internal_marks": 42.6,
+        "internal_percentage": 71.0,
+        "fat_marks": 28.4,
+        "grade": "B",
+        "semester": "Fall Semester 2023-24"
+      }
+    ],
+    "Winter Semester 2023-24": [
+      {
+        "course_code": "BCSE102L",
+        "course_name": "Structured and Object-Oriented Programming",
+        "subject_type": "CORE_CSE",
+        "total_marks": 83,
+        "internal_marks": 49.8,
+        "internal_percentage": 83.0,
+        "fat_marks": 33.2,
+        "grade": "A",
+        "semester": "Winter Semester 2023-24"
+      },
+      {
+        "course_code": "BCSE102P",
+        "course_name": "Structured and Object-Oriented Programming Lab",
+        "subject_type": "LAB",
+        "total_marks": 95,
+        "internal_marks": 57.0,
+        "internal_percentage": 95.0,
+        "fat_marks": 38.0,
+        "grade": "S",
+        "semester": "Winter Semester 2023-24"
+      },
+      {
+        "course_code": "BCSE303L",
+        "course_name": "Operating Systems",
+        "subject_type": "CORE_CSE",
+        "total_marks": 82,
+        "internal_marks": 49.2,
+        "internal_percentage": 82.0,
+        "fat_marks": 32.8,
+        "grade": "A",
+        "semester": "Winter Semester 2023-24"
+      },
+      {
+        "course_code": "BCSE303P",
+        "course_name": "Operating Systems Lab",
+        "subject_type": "LAB",
+        "total_marks": 91,
+        "internal_marks": 54.6,
+        "internal_percentage": 91.0,
+        "fat_marks": 36.4,
+        "grade": "S",
+        "semester": "Winter Semester 2023-24"
+      },
+      {
+        "course_code": "BEEE102L",
+        "course_name": "Basic Electrical and Electronics Engineering",
+        "subject_type": "CORE_ENGG",
+        "total_marks": 75,
+        "internal_marks": 45.0,
+        "internal_percentage": 75.0,
+        "fat_marks": 30.0,
+        "grade": "B",
+        "semester": "Winter Semester 2023-24"
+      },
+      {
+        "course_code": "BEEE102P",
+        "course_name": "Basic Electrical and Electronics Engineering Lab",
+        "subject_type": "LAB",
+        "total_marks": 89,
+        "internal_marks": 53.4,
+        "internal_percentage": 89.0,
+        "fat_marks": 35.6,
+        "grade": "A",
+        "semester": "Winter Semester 2023-24"
+      },
+      {
+        "course_code": "BENG101L",
+        "course_name": "Technical English Communication",
+        "subject_type": "SOFT_SKILL",
+        "total_marks": 84,
+        "internal_marks": 50.4,
+        "internal_percentage": 84.0,
+        "fat_marks": 33.6,
+        "grade": "A",
+        "semester": "Winter Semester 2023-24"
+      },
+      {
+        "course_code": "BENG101P",
+        "course_name": "Technical English Communication Lab",
+        "subject_type": "LAB",
+        "total_marks": 85,
+        "internal_marks": 51.0,
+        "internal_percentage": 85.0,
+        "fat_marks": 34.0,
+        "grade": "A",
+        "semester": "Winter Semester 2023-24"
+      },
+      {
+        "course_code": "BMAT102L",
+        "course_name": "Differential Equations and Transforms",
+        "subject_type": "MATH",
+        "total_marks": 53,
+        "internal_marks": 31.8,
+        "internal_percentage": 53.0,
+        "fat_marks": 21.2,
+        "grade": "D",
+        "semester": "Winter Semester 2023-24"
+      }
+    ],
+    "Fall Semester 2024-25": [
+      {
+        "course_code": "BCSE103E",
+        "course_name": "Computer Programming: Java",
+        "subject_type": "CORE_CSE",
+        "total_marks": 95,
+        "internal_marks": 57.0,
+        "internal_percentage": 95.0,
+        "fat_marks": 38.0,
+        "grade": "S",
+        "semester": "Fall Semester 2024-25"
+      },
+      {
+        "course_code": "BCSE202L",
+        "course_name": "Data Structures and Algorithms",
+        "subject_type": "CORE_CSE",
+        "total_marks": 76,
+        "internal_marks": 45.6,
+        "internal_percentage": 76.0,
+        "fat_marks": 30.4,
+        "grade": "B",
+        "semester": "Fall Semester 2024-25"
+      },
+      {
+        "course_code": "BCSE202P",
+        "course_name": "Data Structures and Algorithms Lab",
+        "subject_type": "LAB",
+        "total_marks": 93,
+        "internal_marks": 55.8,
+        "internal_percentage": 93.0,
+        "fat_marks": 37.2,
+        "grade": "S",
+        "semester": "Fall Semester 2024-25"
+      },
+      {
+        "course_code": "BECE102L",
+        "course_name": "Digital Systems Design",
+        "subject_type": "CORE_ENGG",
+        "total_marks": 71,
+        "internal_marks": 42.6,
+        "internal_percentage": 71.0,
+        "fat_marks": 28.4,
+        "grade": "B",
+        "semester": "Fall Semester 2024-25"
+      },
+      {
+        "course_code": "BECE102P",
+        "course_name": "Digital Systems Design Lab",
+        "subject_type": "LAB",
+        "total_marks": 81,
+        "internal_marks": 48.6,
+        "internal_percentage": 81.0,
+        "fat_marks": 32.4,
+        "grade": "A",
+        "semester": "Fall Semester 2024-25"
+      },
+      {
+        "course_code": "BENG102P",
+        "course_name": "Technical Report Writing",
+        "subject_type": "LAB",
+        "total_marks": 80,
+        "internal_marks": 48.0,
+        "internal_percentage": 80.0,
+        "fat_marks": 32.0,
+        "grade": "A",
+        "semester": "Fall Semester 2024-25"
+      },
+      {
+        "course_code": "BMAT201L",
+        "course_name": "Complex Variables and Linear Algebra",
+        "subject_type": "MATH",
+        "total_marks": 70,
+        "internal_marks": 42.0,
+        "internal_percentage": 70.0,
+        "fat_marks": 28.0,
+        "grade": "B",
+        "semester": "Fall Semester 2024-25"
+      },
+      {
+        "course_code": "BMAT205L",
+        "course_name": "Discrete Mathematics and Graph Theory",
+        "subject_type": "MATH",
+        "total_marks": 71,
+        "internal_marks": 42.6,
+        "internal_percentage": 71.0,
+        "fat_marks": 28.4,
+        "grade": "B",
+        "semester": "Fall Semester 2024-25"
+      },
+      {
+        "course_code": "BSTS202P",
+        "course_name": "Qualitative Skills Practice II",
+        "subject_type": "LAB",
+        "total_marks": 62,
+        "internal_marks": 37.2,
+        "internal_percentage": 62.0,
+        "fat_marks": 24.8,
+        "grade": "C",
+        "semester": "Fall Semester 2024-25"
+      }
+    ],
+    "Winter Semester 2024-25": [
+      {
+        "course_code": "BCLE216L",
+        "course_name": "Water Resource Management",
+        "subject_type": "ELECTIVE",
+        "total_marks": 63,
+        "internal_marks": 37.8,
+        "internal_percentage": 63.0,
+        "fat_marks": 25.2,
+        "grade": "B",
+        "semester": "Winter Semester 2024-25"
+      },
+      {
+        "course_code": "BCSE203E",
+        "course_name": "Web Programming",
+        "subject_type": "CORE_CSE",
+        "total_marks": 91,
+        "internal_marks": 54.6,
+        "internal_percentage": 91.0,
+        "fat_marks": 36.4,
+        "grade": "S",
+        "semester": "Winter Semester 2024-25"
+      },
+      {
+        "course_code": "BCSE204L",
+        "course_name": "Design and Analysis of Algorithms",
+        "subject_type": "CORE_CSE",
+        "total_marks": 63,
+        "internal_marks": 37.8,
+        "internal_percentage": 63.0,
+        "fat_marks": 25.2,
+        "grade": "B",
+        "semester": "Winter Semester 2024-25"
+      },
+      {
+        "course_code": "BCSE204P",
+        "course_name": "Design and Analysis of Algorithms Lab",
+        "subject_type": "LAB",
+        "total_marks": 91,
+        "internal_marks": 54.6,
+        "internal_percentage": 91.0,
+        "fat_marks": 36.4,
+        "grade": "S",
+        "semester": "Winter Semester 2024-25"
+      },
+      {
+        "course_code": "BCSE205L",
+        "course_name": "Computer Architecture and Organization",
+        "subject_type": "CORE_CSE",
+        "total_marks": 74,
+        "internal_marks": 44.4,
+        "internal_percentage": 74.0,
+        "fat_marks": 29.6,
+        "grade": "A",
+        "semester": "Winter Semester 2024-25"
+      },
+      {
+        "course_code": "BECE204L",
+        "course_name": "Microprocessors and Microcontrollers",
+        "subject_type": "CORE_ENGG",
+        "total_marks": 82,
+        "internal_marks": 49.2,
+        "internal_percentage": 82.0,
+        "fat_marks": 32.8,
+        "grade": "B",
+        "semester": "Winter Semester 2024-25"
+      },
+      {
+        "course_code": "BECE204P",
+        "course_name": "Microprocessors and Microcontrollers Lab",
+        "subject_type": "LAB",
+        "total_marks": 88,
+        "internal_marks": 52.8,
+        "internal_percentage": 88.0,
+        "fat_marks": 35.2,
+        "grade": "A",
+        "semester": "Winter Semester 2024-25"
+      },
+      {
+        "course_code": "BMAT202L",
+        "course_name": "Probability and Statistics",
+        "subject_type": "MATH",
+        "total_marks": 70,
+        "internal_marks": 42.0,
+        "internal_percentage": 70.0,
+        "fat_marks": 28.0,
+        "grade": "B",
+        "semester": "Winter Semester 2024-25"
+      },
+      {
+        "course_code": "BMAT202P",
+        "course_name": "Probability and Statistics Lab",
+        "subject_type": "LAB",
+        "total_marks": 81,
+        "internal_marks": 48.6,
+        "internal_percentage": 81.0,
+        "fat_marks": 32.4,
+        "grade": "A",
+        "semester": "Winter Semester 2024-25"
+      }
+    ]
+  },
+  "patterns_by_type": {
+    "CORE_CSE": [
+      {
+        "course_code": "BCSE101E",
+        "course_name": "Computer Programming: Python",
+        "internal_marks": 49.2,
+        "internal_percentage": 82.0,
+        "fat_marks": 32.8,
+        "total_marks": 82,
+        "grade": "A",
+        "semester": "Fall Semester 2023-24"
+      },
+      {
+        "course_code": "BCSE102L",
+        "course_name": "Structured and Object-Oriented Programming",
+        "internal_marks": 49.8,
+        "internal_percentage": 83.0,
+        "fat_marks": 33.2,
+        "total_marks": 83,
+        "grade": "A",
+        "semester": "Winter Semester 2023-24"
+      },
+      {
+        "course_code": "BCSE303L",
+        "course_name": "Operating Systems",
+        "internal_marks": 49.2,
+        "internal_percentage": 82.0,
+        "fat_marks": 32.8,
+        "total_marks": 82,
+        "grade": "A",
+        "semester": "Winter Semester 2023-24"
+      },
+      {
+        "course_code": "BCSE103E",
+        "course_name": "Computer Programming: Java",
+        "internal_marks": 57.0,
+        "internal_percentage": 95.0,
+        "fat_marks": 38.0,
+        "total_marks": 95,
+        "grade": "S",
+        "semester": "Fall Semester 2024-25"
+      },
+      {
+        "course_code": "BCSE202L",
+        "course_name": "Data Structures and Algorithms",
+        "internal_marks": 45.6,
+        "internal_percentage": 76.0,
+        "fat_marks": 30.4,
+        "total_marks": 76,
+        "grade": "B",
+        "semester": "Fall Semester 2024-25"
+      },
+      {
+        "course_code": "BCSE203E",
+        "course_name": "Web Programming",
+        "internal_marks": 54.6,
+        "internal_percentage": 91.0,
+        "fat_marks": 36.4,
+        "total_marks": 91,
+        "grade": "S",
+        "semester": "Winter Semester 2024-25"
+      },
+      {
+        "course_code": "BCSE204L",
+        "course_name": "Design and Analysis of Algorithms",
+        "internal_marks": 37.8,
+        "internal_percentage": 63.0,
+        "fat_marks": 25.2,
+        "total_marks": 63,
+        "grade": "B",
+        "semester": "Winter Semester 2024-25"
+      },
+      {
+        "course_code": "BCSE205L",
+        "course_name": "Computer Architecture and Organization",
+        "internal_marks": 44.4,
+        "internal_percentage": 74.0,
+        "fat_marks": 29.6,
+        "total_marks": 74,
+        "grade": "A",
+        "semester": "Winter Semester 2024-25"
+      }
+    ],
+    "CORE_ENGG": [
+      {
+        "course_code": "BCHY101L",
+        "course_name": "Engineering Chemistry",
+        "internal_marks": 39.0,
+        "internal_percentage": 65.0,
+        "fat_marks": 26.0,
+        "total_marks": 65,
+        "grade": "C",
+        "semester": "Fall Semester 2023-24"
+      },
+      {
+        "course_code": "BPHY101L",
+        "course_name": "Engineering Physics",
+        "internal_marks": 35.4,
+        "internal_percentage": 59.0,
+        "fat_marks": 23.6,
+        "total_marks": 59,
+        "grade": "C",
+        "semester": "Fall Semester 2023-24"
+      },
+      {
+        "course_code": "BEEE102L",
+        "course_name": "Basic Electrical and Electronics Engineering",
+        "internal_marks": 45.0,
+        "internal_percentage": 75.0,
+        "fat_marks": 30.0,
+        "total_marks": 75,
+        "grade": "B",
+        "semester": "Winter Semester 2023-24"
+      },
+      {
+        "course_code": "BECE102L",
+        "course_name": "Digital Systems Design",
+        "internal_marks": 42.6,
+        "internal_percentage": 71.0,
+        "fat_marks": 28.4,
+        "total_marks": 71,
+        "grade": "B",
+        "semester": "Fall Semester 2024-25"
+      },
+      {
+        "course_code": "BECE204L",
+        "course_name": "Microprocessors and Microcontrollers",
+        "internal_marks": 49.2,
+        "internal_percentage": 82.0,
+        "fat_marks": 32.8,
+        "total_marks": 82,
+        "grade": "B",
+        "semester": "Winter Semester 2024-25"
+      }
+    ],
+    "LAB": [
+      {
+        "course_code": "BCHY101P",
+        "course_name": "Engineering Chemistry Lab",
+        "internal_marks": 55.2,
+        "internal_percentage": 92.0,
+        "fat_marks": 36.8,
+        "total_marks": 92,
+        "grade": "S",
+        "semester": "Fall Semester 2023-24"
+      },
+      {
+        "course_code": "BMAT101P",
+        "course_name": "Calculus Lab",
+        "internal_marks": 55.2,
+        "internal_percentage": 92.0,
+        "fat_marks": 36.8,
+        "total_marks": 92,
+        "grade": "S",
+        "semester": "Fall Semester 2023-24"
+      },
+      {
+        "course_code": "BPHY101P",
+        "course_name": "Engineering Physics Lab",
+        "internal_marks": 55.8,
+        "internal_percentage": 93.0,
+        "fat_marks": 37.2,
+        "total_marks": 93,
+        "grade": "S",
+        "semester": "Fall Semester 2023-24"
+      },
+      {
+        "course_code": "BSTS201P",
+        "course_name": "Qualitative Skills Practice I",
+        "internal_marks": 42.6,
+        "internal_percentage": 71.0,
+        "fat_marks": 28.4,
+        "total_marks": 71,
+        "grade": "B",
+        "semester": "Fall Semester 2023-24"
+      },
+      {
+        "course_code": "BCSE102P",
+        "course_name": "Structured and Object-Oriented Programming Lab",
+        "internal_marks": 57.0,
+        "internal_percentage": 95.0,
+        "fat_marks": 38.0,
+        "total_marks": 95,
+        "grade": "S",
+        "semester": "Winter Semester 2023-24"
+      },
+      {
+        "course_code": "BCSE303P",
+        "course_name": "Operating Systems Lab",
+        "internal_marks": 54.6,
+        "internal_percentage": 91.0,
+        "fat_marks": 36.4,
+        "total_marks": 91,
+        "grade": "S",
+        "semester": "Winter Semester 2023-24"
+      },
+      {
+        "course_code": "BEEE102P",
+        "course_name": "Basic Electrical and Electronics Engineering Lab",
+        "internal_marks": 53.4,
+        "internal_percentage": 89.0,
+        "fat_marks": 35.6,
+        "total_marks": 89,
+        "grade": "A",
+        "semester": "Winter Semester 2023-24"
+      },
+      {
+        "course_code": "BENG101P",
+        "course_name": "Technical English Communication Lab",
+        "internal_marks": 51.0,
+        "internal_percentage": 85.0,
+        "fat_marks": 34.0,
+        "total_marks": 85,
+        "grade": "A",
+        "semester": "Winter Semester 2023-24"
+      },
+      {
+        "course_code": "BCSE202P",
+        "course_name": "Data Structures and Algorithms Lab",
+        "internal_marks": 55.8,
+        "internal_percentage": 93.0,
+        "fat_marks": 37.2,
+        "total_marks": 93,
+        "grade": "S",
+        "semester": "Fall Semester 2024-25"
+      },
+      {
+        "course_code": "BECE102P",
+        "course_name": "Digital Systems Design Lab",
+        "internal_marks": 48.6,
+        "internal_percentage": 81.0,
+        "fat_marks": 32.4,
+        "total_marks": 81,
+        "grade": "A",
+        "semester": "Fall Semester 2024-25"
+      },
+      {
+        "course_code": "BENG102P",
+        "course_name": "Technical Report Writing",
+        "internal_marks": 48.0,
+        "internal_percentage": 80.0,
+        "fat_marks": 32.0,
+        "total_marks": 80,
+        "grade": "A",
+        "semester": "Fall Semester 2024-25"
+      },
+      {
+        "course_code": "BSTS202P",
+        "course_name": "Qualitative Skills Practice II",
+        "internal_marks": 37.2,
+        "internal_percentage": 62.0,
+        "fat_marks": 24.8,
+        "total_marks": 62,
+        "grade": "C",
+        "semester": "Fall Semester 2024-25"
+      },
+      {
+        "course_code": "BCSE204P",
+        "course_name": "Design and Analysis of Algorithms Lab",
+        "internal_marks": 54.6,
+        "internal_percentage": 91.0,
+        "fat_marks": 36.4,
+        "total_marks": 91,
+        "grade": "S",
+        "semester": "Winter Semester 2024-25"
+      },
+      {
+        "course_code": "BECE204P",
+        "course_name": "Microprocessors and Microcontrollers Lab",
+        "internal_marks": 52.8,
+        "internal_percentage": 88.0,
+        "fat_marks": 35.2,
+        "total_marks": 88,
+        "grade": "A",
+        "semester": "Winter Semester 2024-25"
+      },
+      {
+        "course_code": "BMAT202P",
+        "course_name": "Probability and Statistics Lab",
+        "internal_marks": 48.6,
+        "internal_percentage": 81.0,
+        "fat_marks": 32.4,
+        "total_marks": 81,
+        "grade": "A",
+        "semester": "Winter Semester 2024-25"
+      }
+    ],
+    "MATH": [
+      {
+        "course_code": "BMAT101L",
+        "course_name": "Calculus",
+        "internal_marks": 37.2,
+        "internal_percentage": 62.0,
+        "fat_marks": 24.8,
+        "total_marks": 62,
+        "grade": "C",
+        "semester": "Fall Semester 2023-24"
+      },
+      {
+        "course_code": "BMAT102L",
+        "course_name": "Differential Equations and Transforms",
+        "internal_marks": 31.8,
+        "internal_percentage": 53.0,
+        "fat_marks": 21.2,
+        "total_marks": 53,
+        "grade": "D",
+        "semester": "Winter Semester 2023-24"
+      },
+      {
+        "course_code": "BMAT201L",
+        "course_name": "Complex Variables and Linear Algebra",
+        "internal_marks": 42.0,
+        "internal_percentage": 70.0,
+        "fat_marks": 28.0,
+        "total_marks": 70,
+        "grade": "B",
+        "semester": "Fall Semester 2024-25"
+      },
+      {
+        "course_code": "BMAT205L",
+        "course_name": "Discrete Mathematics and Graph Theory",
+        "internal_marks": 42.6,
+        "internal_percentage": 71.0,
+        "fat_marks": 28.4,
+        "total_marks": 71,
+        "grade": "B",
+        "semester": "Fall Semester 2024-25"
+      },
+      {
+        "course_code": "BMAT202L",
+        "course_name": "Probability and Statistics",
+        "internal_marks": 42.0,
+        "internal_percentage": 70.0,
+        "fat_marks": 28.0,
+        "total_marks": 70,
+        "grade": "B",
+        "semester": "Winter Semester 2024-25"
+      }
+    ],
+    "SOFT_SKILL": [
+      {
+        "course_code": "BENG101L",
+        "course_name": "Technical English Communication",
+        "internal_marks": 50.4,
+        "internal_percentage": 84.0,
+        "fat_marks": 33.6,
+        "total_marks": 84,
+        "grade": "A",
+        "semester": "Winter Semester 2023-24"
+      }
+    ],
+    "ELECTIVE": [
+      {
+        "course_code": "BCLE216L",
+        "course_name": "Water Resource Management",
+        "internal_marks": 37.8,
+        "internal_percentage": 63.0,
+        "fat_marks": 25.2,
+        "total_marks": 63,
+        "grade": "B",
+        "semester": "Winter Semester 2024-25"
+      }
+    ]
+  },
+  "pattern_summary": {
+    "CORE_CSE": {
+      "total_courses": 8,
+      "grade_patterns": {
+        "A": {
+          "count": 4,
+          "avg_internal_percentage": 80.25,
+          "avg_fat_marks": 32.1,
+          "avg_total_marks": 80.25,
+          "range_internal": {
+            "min": 74.0,
+            "max": 83.0
+          },
+          "examples": [
+            {
+              "code": "BCSE101E",
+              "name": "Computer Programming: Python",
+              "internal_pct": 82.0
+            },
+            {
+              "code": "BCSE102L",
+              "name": "Structured and Object-Oriented Programming",
+              "internal_pct": 83.0
+            },
+            {
+              "code": "BCSE303L",
+              "name": "Operating Systems",
+              "internal_pct": 82.0
+            }
+          ]
+        },
+        "S": {
+          "count": 2,
+          "avg_internal_percentage": 93.0,
+          "avg_fat_marks": 37.2,
+          "avg_total_marks": 93.0,
+          "range_internal": {
+            "min": 91.0,
+            "max": 95.0
+          },
+          "examples": [
+            {
+              "code": "BCSE103E",
+              "name": "Computer Programming: Java",
+              "internal_pct": 95.0
+            },
+            {
+              "code": "BCSE203E",
+              "name": "Web Programming",
+              "internal_pct": 91.0
+            }
+          ]
+        },
+        "B": {
+          "count": 2,
+          "avg_internal_percentage": 69.5,
+          "avg_fat_marks": 27.8,
+          "avg_total_marks": 69.5,
+          "range_internal": {
+            "min": 63.0,
+            "max": 76.0
+          },
+          "examples": [
+            {
+              "code": "BCSE202L",
+              "name": "Data Structures and Algorithms",
+              "internal_pct": 76.0
+            },
+            {
+              "code": "BCSE204L",
+              "name": "Design and Analysis of Algorithms",
+              "internal_pct": 63.0
+            }
+          ]
+        }
+      }
+    },
+    "CORE_ENGG": {
+      "total_courses": 5,
+      "grade_patterns": {
+        "C": {
+          "count": 2,
+          "avg_internal_percentage": 62.0,
+          "avg_fat_marks": 24.8,
+          "avg_total_marks": 62.0,
+          "range_internal": {
+            "min": 59.0,
+            "max": 65.0
+          },
+          "examples": [
+            {
+              "code": "BCHY101L",
+              "name": "Engineering Chemistry",
+              "internal_pct": 65.0
+            },
+            {
+              "code": "BPHY101L",
+              "name": "Engineering Physics",
+              "internal_pct": 59.0
+            }
+          ]
+        },
+        "B": {
+          "count": 3,
+          "avg_internal_percentage": 76.0,
+          "avg_fat_marks": 30.4,
+          "avg_total_marks": 76.0,
+          "range_internal": {
+            "min": 71.0,
+            "max": 82.0
+          },
+          "examples": [
+            {
+              "code": "BEEE102L",
+              "name": "Basic Electrical and Electronics Engineering",
+              "internal_pct": 75.0
+            },
+            {
+              "code": "BECE102L",
+              "name": "Digital Systems Design",
+              "internal_pct": 71.0
+            },
+            {
+              "code": "BECE204L",
+              "name": "Microprocessors and Microcontrollers",
+              "internal_pct": 82.0
+            }
+          ]
+        }
+      }
+    },
+    "LAB": {
+      "total_courses": 15,
+      "grade_patterns": {
+        "S": {
+          "count": 7,
+          "avg_internal_percentage": 92.43,
+          "avg_fat_marks": 36.97,
+          "avg_total_marks": 92.43,
+          "range_internal": {
+            "min": 91.0,
+            "max": 95.0
+          },
+          "examples": [
+            {
+              "code": "BCHY101P",
+              "name": "Engineering Chemistry Lab",
+              "internal_pct": 92.0
+            },
+            {
+              "code": "BMAT101P",
+              "name": "Calculus Lab",
+              "internal_pct": 92.0
+            },
+            {
+              "code": "BPHY101P",
+              "name": "Engineering Physics Lab",
+              "internal_pct": 93.0
+            }
+          ]
+        },
+        "B": {
+          "count": 1,
+          "avg_internal_percentage": 71.0,
+          "avg_fat_marks": 28.4,
+          "avg_total_marks": 71.0,
+          "range_internal": {
+            "min": 71.0,
+            "max": 71.0
+          },
+          "examples": [
+            {
+              "code": "BSTS201P",
+              "name": "Qualitative Skills Practice I",
+              "internal_pct": 71.0
+            }
+          ]
+        },
+        "A": {
+          "count": 6,
+          "avg_internal_percentage": 84.0,
+          "avg_fat_marks": 33.6,
+          "avg_total_marks": 84.0,
+          "range_internal": {
+            "min": 80.0,
+            "max": 89.0
+          },
+          "examples": [
+            {
+              "code": "BEEE102P",
+              "name": "Basic Electrical and Electronics Engineering Lab",
+              "internal_pct": 89.0
+            },
+            {
+              "code": "BENG101P",
+              "name": "Technical English Communication Lab",
+              "internal_pct": 85.0
+            },
+            {
+              "code": "BECE102P",
+              "name": "Digital Systems Design Lab",
+              "internal_pct": 81.0
+            }
+          ]
+        },
+        "C": {
+          "count": 1,
+          "avg_internal_percentage": 62.0,
+          "avg_fat_marks": 24.8,
+          "avg_total_marks": 62.0,
+          "range_internal": {
+            "min": 62.0,
+            "max": 62.0
+          },
+          "examples": [
+            {
+              "code": "BSTS202P",
+              "name": "Qualitative Skills Practice II",
+              "internal_pct": 62.0
+            }
+          ]
+        }
+      }
+    },
+    "MATH": {
+      "total_courses": 5,
+      "grade_patterns": {
+        "C": {
+          "count": 1,
+          "avg_internal_percentage": 62.0,
+          "avg_fat_marks": 24.8,
+          "avg_total_marks": 62.0,
+          "range_internal": {
+            "min": 62.0,
+            "max": 62.0
+          },
+          "examples": [
+            {
+              "code": "BMAT101L",
+              "name": "Calculus",
+              "internal_pct": 62.0
+            }
+          ]
+        },
+        "D": {
+          "count": 1,
+          "avg_internal_percentage": 53.0,
+          "avg_fat_marks": 21.2,
+          "avg_total_marks": 53.0,
+          "range_internal": {
+            "min": 53.0,
+            "max": 53.0
+          },
+          "examples": [
+            {
+              "code": "BMAT102L",
+              "name": "Differential Equations and Transforms",
+              "internal_pct": 53.0
+            }
+          ]
+        },
+        "B": {
+          "count": 3,
+          "avg_internal_percentage": 70.33,
+          "avg_fat_marks": 28.13,
+          "avg_total_marks": 70.33,
+          "range_internal": {
+            "min": 70.0,
+            "max": 71.0
+          },
+          "examples": [
+            {
+              "code": "BMAT201L",
+              "name": "Complex Variables and Linear Algebra",
+              "internal_pct": 70.0
+            },
+            {
+              "code": "BMAT205L",
+              "name": "Discrete Mathematics and Graph Theory",
+              "internal_pct": 71.0
+            },
+            {
+              "code": "BMAT202L",
+              "name": "Probability and Statistics",
+              "internal_pct": 70.0
+            }
+          ]
+        }
+      }
+    },
+    "SOFT_SKILL": {
+      "total_courses": 1,
+      "grade_patterns": {
+        "A": {
+          "count": 1,
+          "avg_internal_percentage": 84.0,
+          "avg_fat_marks": 33.6,
+          "avg_total_marks": 84.0,
+          "range_internal": {
+            "min": 84.0,
+            "max": 84.0
+          },
+          "examples": [
+            {
+              "code": "BENG101L",
+              "name": "Technical English Communication",
+              "internal_pct": 84.0
+            }
+          ]
+        }
+      }
+    },
+    "ELECTIVE": {
+      "total_courses": 1,
+      "grade_patterns": {
+        "B": {
+          "count": 1,
+          "avg_internal_percentage": 63.0,
+          "avg_fat_marks": 25.2,
+          "avg_total_marks": 63.0,
+          "range_internal": {
+            "min": 63.0,
+            "max": 63.0
+          },
+          "examples": [
+            {
+              "code": "BCLE216L",
+              "name": "Water Resource Management",
+              "internal_pct": 63.0
+            }
+          ]
+        }
+      }
+    }
+  }
+}

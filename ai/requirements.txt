@@ -1,0 +1,21 @@
+# CLI-TOP AI Features Requirements
+# All dependencies for AI features and Gemini integration
+
+# Core Gemini AI
+google-generativeai>=0.3.0
+
+# Utilities
+python-dotenv>=1.0.0
+
+# Data processing (for AI features)
+numpy>=1.24.0
+pandas>=2.0.0
+
+# Speech and Voice (for voice assistant)
+SpeechRecognition>=3.10.0
+pyttsx3>=2.90
+PyAudio>=0.2.13
+
+# Optional: For visualization and analytics
+matplotlib>=3.7.0
+seaborn>=0.12.0
