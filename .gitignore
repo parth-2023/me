@@ -23,3 +23,17 @@ cli-top*
 # Calendar files
 *.ics
 /.vs
+
+# Python / local environment
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.db
+ai/data/*.db
+
+# macOS
+.DS_Store
