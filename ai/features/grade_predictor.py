@@ -14,13 +14,13 @@ from pathlib import Path
 
 # Simple logger
 def log_info(msg):
-    print(f"ℹ {msg}")
+    print(f"INFO: {msg}")
 
 def log_success(msg):
-    print(f"✓ {msg}")
+    print(f"SUCCESS: {msg}")
 
 def log_warning(msg):
-    print(f"⚠ {msg}")
+    print(f"WARNING: {msg}")
 
 
 def categorize_subject_type(course_code: str, course_name: str) -> str:
@@ -243,7 +243,7 @@ def predict_grade_from_historical(internal_marks: float, subject_type: str,
         confidence = 40
     
     reason = (f"Based on {best_match['count']} historical {subject_type} courses with "
-              f"{best_match['avg_internal']:.1f}% internal → Grade {best_match['grade']}. "
+              f"{best_match['avg_internal']:.1f}% internal -> Grade {best_match['grade']}. "
               f"Your {internal_percentage:.1f}% is {best_match['diff']:.1f}% away.")
     
     return {
@@ -266,13 +266,13 @@ def calculate_fat_requirements(internal_marks: float) -> dict:
         if fat_needed <= 0:
             fat_reqs[grade] = {
                 "fat_needed": 0,
-                "feasibility": "✓ Already achieved",
+                "feasibility": "OK Already achieved",
                 "percentage": 0
             }
         elif fat_needed > 40:
             fat_reqs[grade] = {
                 "fat_needed": fat_needed,
-                "feasibility": "✗ Not achievable",
+                "feasibility": "X Not achievable",
                 "percentage": 100
             }
         else:
@@ -368,7 +368,7 @@ def main():
         print(f"      DA:    {marks['DA']:.1f}/10")
         print(f"      Quiz1: {marks['Quiz1']:.1f}/10")
         print(f"      Quiz2: {marks['Quiz2']:.1f}/10")
-        print(f"      ────────────────────")
+        print(f"      ---------------------")
         print(f"      Total: {marks['total_internal']:.1f}/60 ({marks['internal_percentage']:.1f}%)")
         
         print(f"\n   Predicted Grade: {grade['predicted_grade']} (Confidence: {grade['confidence']}%)")
@@ -380,7 +380,7 @@ def main():
                 req = result['fat_requirements'][g]
                 if req['fat_needed'] > 0 and req['fat_needed'] <= 40:
                     print(f"      Grade {g}: {req['fat_needed']:.1f}/40 ({req['percentage']:.1f}%) - {req['feasibility']}")
-                elif req['feasibility'] == "✓ Already achieved":
+                elif req['feasibility'] == "OK Already achieved":
                     print(f"      Grade {g}: {req['feasibility']}")
         
         print(f"   {'-'*86}")

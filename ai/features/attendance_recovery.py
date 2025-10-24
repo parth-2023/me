@@ -126,11 +126,11 @@ def run_attendance_recovery(vtop_data: Dict) -> List[Dict]:
     ]
     
     if not low_attendance_courses:
-        print("  ✅ All courses above 75% attendance")
+        print("  OK All courses above 75% attendance")
         print("  No recovery plan needed")
         return []
     
-    print(f"  ⚠️ Found {len(low_attendance_courses)} courses below 75%\n")
+    print(f"  WARNING: Found {len(low_attendance_courses)} courses below 75%\n")
     
     results = []
     
@@ -147,7 +147,7 @@ def run_attendance_recovery(vtop_data: Dict) -> List[Dict]:
         
         # Display result
         recovery_possible = result["recovery_plan"]["recovery_possible"]
-        icon = "✅" if recovery_possible else "❌"
+        icon = "OK" if recovery_possible else "FAIL"
         
         lines = [
             f"Course: {course_code} - {course_name}",
@@ -168,7 +168,7 @@ def run_attendance_recovery(vtop_data: Dict) -> List[Dict]:
         for item in result["recovery_plan"]["action_items"]:
             lines.append(f"  • {item}")
         
-        print_box(f"⚠️ {course_code}", lines)
+        print_box(f"WARNING: {course_code}", lines)
         print()
     
     return results
@@ -191,7 +191,7 @@ if __name__ == "__main__":
     results = run_attendance_recovery(vtop_data)
     
     if not results:
-        print("✅ All courses have safe attendance (≥75%)")
+        print("OK All courses have safe attendance (>=75%)")
 
 
 __all__ = ["generate_recovery_plan", "run_attendance_recovery"]

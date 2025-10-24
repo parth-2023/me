@@ -191,7 +191,7 @@ def run_performance_analyzer(vtop_data: Dict) -> Dict:
         cgpa_analysis = analyze_cgpa_trend(cgpa_history)
         
         if "error" in cgpa_analysis:
-            print(f"  ℹ️  {cgpa_analysis['error']}")
+            print(f"  INFO:  {cgpa_analysis['error']}")
             print()
         else:
             results["cgpa_trend"] = cgpa_analysis
@@ -200,7 +200,7 @@ def run_performance_analyzer(vtop_data: Dict) -> Dict:
                 f"Current CGPA: {cgpa_analysis['current_cgpa']}",
                 f"Trend: {cgpa_analysis['trend']}",
                 f"Slope: {cgpa_analysis['slope']} per semester",
-                f"Confidence: {cgpa_analysis['confidence']} (R² = {cgpa_analysis['r_squared']})",
+                f"Confidence: {cgpa_analysis['confidence']} (R^2 = {cgpa_analysis['r_squared']})",
                 "",
                 f"Predicted Next Semester: {cgpa_analysis['predicted_next']}",
                 "",
@@ -211,7 +211,7 @@ def run_performance_analyzer(vtop_data: Dict) -> Dict:
                 f"  • Volatility: {cgpa_analysis['statistics']['volatility']}"
             ]
             
-            icon = "📈" if cgpa_analysis['trend'] == "IMPROVING" else "📉" if cgpa_analysis['trend'] == "DECLINING" else "➡️"
+            icon = "UP" if cgpa_analysis['trend'] == "IMPROVING" else "DOWN" if cgpa_analysis['trend'] == "DECLINING" else "SAME"
             print_box(f"{icon} CGPA Trend", lines)
             print()
     
@@ -220,7 +220,7 @@ def run_performance_analyzer(vtop_data: Dict) -> Dict:
         att_analysis = analyze_attendance_consistency(attendance)
         
         if "error" in att_analysis:
-            print(f"  ℹ️  {att_analysis['error']}")
+            print(f"  INFO:  {att_analysis['error']}")
             print()
         else:
             results["attendance_consistency"] = att_analysis
@@ -231,12 +231,12 @@ def run_performance_analyzer(vtop_data: Dict) -> Dict:
                 f"Standard Deviation: {att_analysis['std_deviation']}%",
                 "",
                 "Course Distribution:",
-                f"  🟢 Safe (≥80%): {att_analysis['safe_courses']} courses",
-                f"  🟡 Warning (75-80%): {att_analysis['warning_courses']} courses",
-                f"  🔴 Critical (<75%): {att_analysis['critical_courses']} courses"
+                f"  GREEN Safe (>=80%): {att_analysis['safe_courses']} courses",
+                f"  YELLOW Warning (75-80%): {att_analysis['warning_courses']} courses",
+                f"  RED Critical (<75%): {att_analysis['critical_courses']} courses"
             ]
             
-            print_box("📊 Attendance Consistency", lines)
+            print_box("STATS: Attendance Consistency", lines)
             print()
     
     # Generate insights
@@ -246,17 +246,17 @@ def run_performance_analyzer(vtop_data: Dict) -> Dict:
     att_analysis = results.get("attendance_consistency", {})
     
     if cgpa_analysis and cgpa_analysis.get('trend') == "IMPROVING":
-        print("  ✅ Your CGPA is showing positive improvement")
+        print("  OK Your CGPA is showing positive improvement")
         print(f"     Predicted to reach {cgpa_analysis['predicted_next']} next semester")
     elif cgpa_analysis and cgpa_analysis.get('trend') == "DECLINING":
-        print("  ⚠️  Your CGPA is declining - action needed")
+        print("  WARNING:  Your CGPA is declining - action needed")
         print("     Review study habits and seek academic support")
     
     if att_analysis and att_analysis.get('critical_courses', 0) > 0:
-        print(f"  🚨 {att_analysis['critical_courses']} course(s) below 75% attendance")
+        print(f"  URGENT: {att_analysis['critical_courses']} course(s) below 75% attendance")
         print("     Focus on attendance recovery immediately")
     elif att_analysis and att_analysis.get('consistency') in ["VERY_CONSISTENT", "CONSISTENT"]:
-        print("  ✅ Excellent attendance consistency maintained")
+        print("  OK Excellent attendance consistency maintained")
     
     print()
     
@@ -279,4 +279,4 @@ if __name__ == "__main__":
     results = run_performance_analyzer(vtop_data)
     
     if not results:
-        print("❌ No performance data available for analysis")
+        print("FAIL No performance data available for analysis")

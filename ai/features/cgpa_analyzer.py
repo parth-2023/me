@@ -118,9 +118,9 @@ def run_cgpa_analyzer(vtop_data: Dict) -> Dict:
     # Get ALL grade predictions from grade_predictor for current semester
     try:
         all_predictions = run_grade_predictor(vtop_data)
-        print(f"  ℹ️  Loaded {len(all_predictions)} grade predictions from AI model")
+        print(f"  INFO:  Loaded {len(all_predictions)} grade predictions from AI model")
     except Exception as e:
-        print(f"  ⚠️  Could not get grade predictions: {e}")
+        print(f"  WARNING:  Could not get grade predictions: {e}")
         print("  Using fallback scenarios...")
         all_predictions = []
     
@@ -207,7 +207,7 @@ def run_cgpa_analyzer(vtop_data: Dict) -> Dict:
             })
     
     if not all_courses_data:
-        print("  ❌ No grade predictions available")
+        print("  FAIL No grade predictions available")
         return {}
     
     # Calculate SEMESTER SGPA using ALL predicted grades with WEIGHTED credits
@@ -260,17 +260,17 @@ def run_cgpa_analyzer(vtop_data: Dict) -> Dict:
         f"Current CGPA: {cgpa}",
         f"Semester: {semester_count + 1}",
         f"Total Courses This Semester: {len(all_courses_data)}",
-        f"  └─ Completed (with FAT): {len(completed_courses)}",
-        f"  └─ Incomplete (no FAT): {len(incomplete_courses)}",
+        f"    - Completed (with FAT): {len(completed_courses)}",
+        f"    - Incomplete (no FAT): {len(incomplete_courses)}",
         f"Total Credits This Semester: {total_credits}",
-        f"  └─ Theory Courses (3 credits each): {sum(1 for c in all_courses_data if not c['is_lab'])}",
-        f"  └─ Lab Courses (1 credit each): {sum(1 for c in all_courses_data if c['is_lab'])}",
+        f"    - Theory Courses (3 credits each): {sum(1 for c in all_courses_data if not c['is_lab'])}",
+        f"    - Lab Courses (1 credit each): {sum(1 for c in all_courses_data if c['is_lab'])}",
         ""
     ]
     
     # Show AI prediction with ALL semester grades
     lines.append("🤖 AI-Predicted Semester Impact:")
-    delta_icon = "📈" if predicted_scenario["cgpa_delta"] > 0 else "📉" if predicted_scenario["cgpa_delta"] < 0 else "➡️"
+    delta_icon = "UP" if predicted_scenario["cgpa_delta"] > 0 else "DOWN" if predicted_scenario["cgpa_delta"] < 0 else "SAME"
     lines.append(f"  {delta_icon} Predicted SGPA: {predicted_scenario['predicted_sgpa']} (Weighted by credits)")
     lines.append(f"     New CGPA: {predicted_scenario['predicted_cgpa']} ({predicted_scenario['cgpa_delta']:+.2f})")
     lines.append("")
@@ -279,7 +279,7 @@ def run_cgpa_analyzer(vtop_data: Dict) -> Dict:
     # Group by status
     if completed_courses:
         lines.append("")
-        lines.append("  ✅ Completed Courses:")
+        lines.append("  OK Completed Courses:")
         for course in all_courses_data:
             if any(c["course_code"] == course["course_code"] for c in completed_courses):
                 grade = course["predicted_grade"]
@@ -306,7 +306,7 @@ def run_cgpa_analyzer(vtop_data: Dict) -> Dict:
         lines.append("")
         lines.append("Alternative Scenarios (Incomplete Courses Only):")
         for scenario in result["scenarios"][1:]:
-            delta_icon = "📈" if scenario["cgpa_delta"] > 0 else "📉" if scenario["cgpa_delta"] < 0 else "➡️"
+            delta_icon = "UP" if scenario["cgpa_delta"] > 0 else "DOWN" if scenario["cgpa_delta"] < 0 else "SAME"
             lines.append(f"  {delta_icon} {scenario['scenario']}")
             lines.append(f"     SGPA: {scenario['predicted_sgpa']} | New CGPA: {scenario['predicted_cgpa']} ({scenario['cgpa_delta']:+.2f})")
     
@@ -314,17 +314,17 @@ def run_cgpa_analyzer(vtop_data: Dict) -> Dict:
     
     # Smart recommendation based on AI prediction
     if predicted_scenario["cgpa_delta"] > 0.3:
-        lines.append(f"🎉 Excellent! AI predicts significant CGPA improvement to {predicted_scenario['predicted_cgpa']}")
+        lines.append(f"SUCCESS Excellent! AI predicts significant CGPA improvement to {predicted_scenario['predicted_cgpa']}")
     elif predicted_scenario["cgpa_delta"] > 0:
-        lines.append(f"💡 AI predicts CGPA will improve to {predicted_scenario['predicted_cgpa']} based on current performance")
+        lines.append(f"TIP AI predicts CGPA will improve to {predicted_scenario['predicted_cgpa']} based on current performance")
     elif predicted_scenario["cgpa_delta"] < -0.2:
-        lines.append(f"⚠️  Warning! AI predicts CGPA may drop to {predicted_scenario['predicted_cgpa']} - focus on improving performance")
+        lines.append(f"WARNING:  Warning! AI predicts CGPA may drop to {predicted_scenario['predicted_cgpa']} - focus on improving performance")
     elif predicted_scenario["cgpa_delta"] < 0:
-        lines.append(f"⚠️  AI predicts slight CGPA decrease to {predicted_scenario['predicted_cgpa']} - maintain focus")
+        lines.append(f"WARNING:  AI predicts slight CGPA decrease to {predicted_scenario['predicted_cgpa']} - maintain focus")
     else:
-        lines.append(f"➡️  AI predicts CGPA will remain stable at {predicted_scenario['predicted_cgpa']}")
+        lines.append(f"SAME  AI predicts CGPA will remain stable at {predicted_scenario['predicted_cgpa']}")
     
-    print_box("📊 CGPA Impact Analysis", lines)
+    print_box("STATS: CGPA Impact Analysis", lines)
     print()
     
     return result
@@ -347,7 +347,7 @@ if __name__ == "__main__":
     result = run_cgpa_analyzer(vtop_data)
     
     if not result:
-        print("❌ No CGPA data available")
+        print("FAIL No CGPA data available")
 
 
 __all__ = ["analyze_cgpa_impact", "run_cgpa_analyzer"]

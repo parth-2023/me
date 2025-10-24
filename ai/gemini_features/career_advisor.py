@@ -70,7 +70,7 @@ def main():
         vtop_data = json.load(f)
     
     print("=" * 70)
-    print("🎯 CAREER ADVISOR - AI-POWERED CAREER GUIDANCE")
+    print("CAREER ADVISOR - AI-POWERED CAREER GUIDANCE")
     print("=" * 70)
     print()
     
@@ -78,7 +78,7 @@ def main():
     print(advice)
     print()
     print("=" * 70)
-    print("💡 Powered by Gemini AI")
+    print("Powered by Gemini AI")
     print("=" * 70)
 
 if __name__ == '__main__':

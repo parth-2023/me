@@ -155,31 +155,31 @@ def generate_action_items(
     
     # General actions based on required SGPA
     if required_sgpa >= 9.5:
-        actions.append("🎯 Target: EXCELLENCE - Aim for S grades in all courses")
+        actions.append("TARGET: Target: EXCELLENCE - Aim for S grades in all courses")
         actions.append("   • Attend all classes (100% attendance)")
         actions.append("   • Complete assignments 2-3 days before deadline")
         actions.append("   • Solve additional practice problems beyond coursework")
         actions.append("   • Form study groups for peer learning")
     elif required_sgpa >= 9.0:
-        actions.append("🎯 Target: HIGH PERFORMANCE - Mix of S and A grades needed")
+        actions.append("TARGET: Target: HIGH PERFORMANCE - Mix of S and A grades needed")
         actions.append("   • Maintain 95%+ attendance")
         actions.append("   • Focus on understanding concepts, not just memorization")
         actions.append("   • Complete all assignments on time")
         actions.append("   • Allocate 30-35 hours/week for studies")
     elif required_sgpa >= 8.0:
-        actions.append("🎯 Target: GOOD PERFORMANCE - Consistent A grades")
+        actions.append("TARGET: Target: GOOD PERFORMANCE - Consistent A grades")
         actions.append("   • Maintain 90%+ attendance")
         actions.append("   • Stay current with lecture material")
         actions.append("   • Review notes weekly")
         actions.append("   • Allocate 25-30 hours/week for studies")
     elif required_sgpa >= 7.0:
-        actions.append("🎯 Target: SATISFACTORY - Mix of A and B grades")
+        actions.append("TARGET: Target: SATISFACTORY - Mix of A and B grades")
         actions.append("   • Maintain 85%+ attendance")
         actions.append("   • Complete all CATs and assignments")
         actions.append("   • Focus on core concepts")
         actions.append("   • Allocate 20-25 hours/week for studies")
     else:
-        actions.append("🎯 Target: IMPROVEMENT NEEDED - Focus on passing")
+        actions.append("TARGET: Target: IMPROVEMENT NEEDED - Focus on passing")
         actions.append("   • Maintain minimum 75% attendance")
         actions.append("   • Seek help from professors/TAs")
         actions.append("   • Join study groups")
@@ -191,12 +191,12 @@ def generate_action_items(
         a_count = sum(1 for p in grade_plans if p["target_grade"] == "A")
         
         if s_count > 0:
-            actions.append(f"\n📚 {s_count} course(s) need S grade:")
+            actions.append(f"\nINFO: {s_count} course(s) need S grade:")
             actions.append("   • Score 90%+ in all assessments")
             actions.append("   • Target 45%+ out of 60% in FAT")
         
         if a_count > 0:
-            actions.append(f"\n📘 {a_count} course(s) need A grade:")
+            actions.append(f"\nCOURSE {a_count} course(s) need A grade:")
             actions.append("   • Score 80%+ overall")
             actions.append("   • Target 42%+ out of 60% in FAT")
     
@@ -243,7 +243,7 @@ def run_target_planner(
             f"Target CGPA: {target_cgpa}",
             f"Required SGPA: {required_sgpa:.2f}",
             "",
-            "❌ TARGET NOT ACHIEVABLE",
+            "FAIL TARGET NOT ACHIEVABLE",
             "Required SGPA exceeds maximum (10.0)",
             "",
             "Suggestions:",
@@ -251,7 +251,7 @@ def run_target_planner(
             "  • Consider longer timeline",
             "  • Focus on consistent improvement"
         ]
-        print_box("⚠️  Feasibility Check", lines)
+        print_box("WARNING:  Feasibility Check", lines)
         print()
         
         return {
@@ -265,12 +265,12 @@ def run_target_planner(
             f"Current CGPA: {current_cgpa}",
             f"Target CGPA: {target_cgpa}",
             "",
-            "✅ TARGET ALREADY ACHIEVED",
+            "OK TARGET ALREADY ACHIEVED",
             "Your current CGPA exceeds the target!",
             "",
-            f"💡 Maintain current performance or aim higher"
+            f"TIP Maintain current performance or aim higher"
         ]
-        print_box("🎉 Status", lines)
+        print_box("SUCCESS Status", lines)
         print()
         
         return {
@@ -301,7 +301,7 @@ def run_target_planner(
             f"Grade {plan['target_grade']} ({plan['grade_point']} points)"
         )
     
-    feasible_icon = "✅" if required_sgpa <= 10.0 else "❌"
+    feasible_icon = "OK" if required_sgpa <= 10.0 else "FAIL"
     print_box(f"{feasible_icon} Target Plan", lines)
     print()
     
@@ -343,4 +343,4 @@ if __name__ == "__main__":
     result = run_target_planner(vtop_data, target_cgpa)
     
     if not result:
-        print("❌ Unable to create target plan")
+        print("FAIL Unable to create target plan")

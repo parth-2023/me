@@ -35,10 +35,10 @@ def load_vtop_data(json_path: str) -> Dict[str, Any]:
             data = json.load(f)
         return data
     except FileNotFoundError:
-        print(f"❌ Error: File not found: {json_path}")
+        print(f"FAIL Error: File not found: {json_path}")
         sys.exit(1)
     except json.JSONDecodeError as e:
-        print(f"❌ Error: Invalid JSON: {e}")
+        print(f"FAIL Error: Invalid JSON: {e}")
         sys.exit(1)
 
 
@@ -73,11 +73,11 @@ def run_all_features(vtop_data: Dict[str, Any]):
     try:
         attendance_results = run_attendance_calculator(vtop_data)
         if attendance_results:
-            print(f"  ✅ Attendance analysis completed for {len(attendance_results)} courses")
+            print(f"  OK Attendance analysis completed for {len(attendance_results)} courses")
             feature_count += 1
         print()
     except Exception as e:
-        print(f"  ❌ Failed: {e}")
+        print(f"  FAIL Failed: {e}")
         print()
     
     # Feature 2: Grade Predictor
@@ -85,11 +85,11 @@ def run_all_features(vtop_data: Dict[str, Any]):
     try:
         grade_results = run_grade_predictor(vtop_data)
         if grade_results:
-            print(f"  ✅ Grade prediction completed for {len(grade_results)} courses")
+            print(f"  OK Grade prediction completed for {len(grade_results)} courses")
             feature_count += 1
         print()
     except Exception as e:
-        print(f"  ❌ Failed: {e}")
+        print(f"  FAIL Failed: {e}")
         print()
     
     # Feature 3: CGPA Impact Analyzer
@@ -97,11 +97,11 @@ def run_all_features(vtop_data: Dict[str, Any]):
     try:
         cgpa_results = run_cgpa_analyzer(vtop_data)
         if cgpa_results:
-            print(f"  ✅ CGPA impact analysis completed")
+            print(f"  OK CGPA impact analysis completed")
             feature_count += 1
         print()
     except Exception as e:
-        print(f"  ❌ Failed: {e}")
+        print(f"  FAIL Failed: {e}")
         print()
     
     # Feature 4: Attendance Recovery Planner
@@ -109,11 +109,11 @@ def run_all_features(vtop_data: Dict[str, Any]):
     try:
         recovery_results = run_attendance_recovery(vtop_data)
         if recovery_results:
-            print(f"  ✅ Recovery plans generated for {len(recovery_results)} courses")
+            print(f"  OK Recovery plans generated for {len(recovery_results)} courses")
             feature_count += 1
         print()
     except Exception as e:
-        print(f"  ❌ Failed: {e}")
+        print(f"  FAIL Failed: {e}")
         print()
     
     # Feature 5: Exam Readiness Scorer
@@ -121,11 +121,11 @@ def run_all_features(vtop_data: Dict[str, Any]):
     try:
         readiness_results = run_exam_readiness(vtop_data)
         if readiness_results:
-            print(f"  ✅ Exam readiness analysis completed for {len(readiness_results)} exams")
+            print(f"  OK Exam readiness analysis completed for {len(readiness_results)} exams")
             feature_count += 1
         print()
     except Exception as e:
-        print(f"  ❌ Failed: {e}")
+        print(f"  FAIL Failed: {e}")
         print()
     
     # Feature 6: Study Time Allocator
@@ -133,11 +133,11 @@ def run_all_features(vtop_data: Dict[str, Any]):
     try:
         study_results = run_study_allocator(vtop_data, total_hours=40)
         if study_results:
-            print(f"  ✅ Study time allocated across {len(study_results)} courses")
+            print(f"  OK Study time allocated across {len(study_results)} courses")
             feature_count += 1
         print()
     except Exception as e:
-        print(f"  ❌ Failed: {e}")
+        print(f"  FAIL Failed: {e}")
         print()
     
     # Feature 7: Performance Trend Analyzer
@@ -145,11 +145,11 @@ def run_all_features(vtop_data: Dict[str, Any]):
     try:
         performance_results = run_performance_analyzer(vtop_data)
         if performance_results:
-            print(f"  ✅ Performance trends analyzed")
+            print(f"  OK Performance trends analyzed")
             feature_count += 1
         print()
     except Exception as e:
-        print(f"  ❌ Failed: {e}")
+        print(f"  FAIL Failed: {e}")
         print()
     
     # Feature 8: Grade Target Planner
@@ -158,11 +158,11 @@ def run_all_features(vtop_data: Dict[str, Any]):
         target_cgpa = 9.0  # Can be made configurable
         target_results = run_target_planner(vtop_data, target_cgpa=target_cgpa, remaining_semesters=1)
         if target_results:
-            print(f"  ✅ Target plan generated")
+            print(f"  OK Target plan generated")
             feature_count += 1
         print()
     except Exception as e:
-        print(f"  ❌ Failed: {e}")
+        print(f"  FAIL Failed: {e}")
         print()
     
     # Feature 9: Weakness Identifier
@@ -170,21 +170,21 @@ def run_all_features(vtop_data: Dict[str, Any]):
     try:
         weakness_results = run_weakness_identifier(vtop_data)
         if weakness_results:
-            print(f"  ✅ Weakness analysis completed")
+            print(f"  OK Weakness analysis completed")
             feature_count += 1
         print()
     except Exception as e:
-        print(f"  ❌ Failed: {e}")
+        print(f"  FAIL Failed: {e}")
         print()
     
     # Summary
     print("=" * 80)
     print_header("SUMMARY")
-    print(f"✅ Features executed: {feature_count}/9")
-    print(f"📊 Total courses: {len(vtop_data.get('marks', []))}")
-    print(f"⏰ Execution time: <1 second (no API calls)")
+    print(f"OK Features executed: {feature_count}/9")
+    print(f"STATS Total courses: {len(vtop_data.get('marks', []))}")
+    print(f"TIME Execution time: <1 second (no API calls)")
     print()
-    print("💡 All features work offline without API keys")
+    print("TIP All features work offline without API keys")
     print("=" * 80)
 
 

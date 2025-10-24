@@ -14,7 +14,7 @@ try:
     import google.generativeai as genai
     from config import GOOGLE_API_KEY, GEMINI_MODEL
 except ImportError:
-    print("❌ Error: google-generativeai not installed")
+    print("FAIL Error: google-generativeai not installed")
     print("   Run: pip install -r ai/requirements.txt")
     sys.exit(1)
 
@@ -22,7 +22,7 @@ def generate_study_plan(vtop_data, days_until_exams=30, daily_hours=6):
     """Generate optimized study plan"""
     
     if not GOOGLE_API_KEY:
-        return "❌ Error: GOOGLE_API_KEY not configured"
+        return "FAIL Error: GOOGLE_API_KEY not configured"
     
     genai.configure(api_key=GOOGLE_API_KEY)
     model = genai.GenerativeModel(GEMINI_MODEL)
@@ -75,7 +75,7 @@ Be practical, specific, and time-bound. Consider the student's current performan
         response = model.generate_content(prompt)
         return response.text
     except Exception as e:
-        return f"❌ Error: {str(e)}"
+        return f"FAIL Error: {str(e)}"
 
 def main():
     """Main entry point"""
@@ -90,7 +90,7 @@ def main():
         vtop_data = json.load(f)
     
     print("=" * 70)
-    print("📚 STUDY OPTIMIZER - AI-POWERED STUDY PLAN GENERATOR")
+    print("INFO: STUDY OPTIMIZER - AI-POWERED STUDY PLAN GENERATOR")
     print("=" * 70)
     print()
     print(f"Planning for {days} days with {hours} hours/day")
@@ -100,7 +100,7 @@ def main():
     print(plan)
     print()
     print("=" * 70)
-    print("💡 Powered by Gemini AI")
+    print("INFO: Powered by Gemini AI")
     print("=" * 70)
 
 if __name__ == '__main__':

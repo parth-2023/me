@@ -131,7 +131,7 @@ def run_attendance_calculator(vtop_data: Dict) -> List[Dict]:
     cgpa = vtop_data.get("cgpa", 0.0)
     
     if not attendance_records:
-        print("  ❌ No attendance data found")
+        print("  FAIL No attendance data found")
         return []
     
     results = []
@@ -152,7 +152,7 @@ def run_attendance_calculator(vtop_data: Dict) -> List[Dict]:
         
         # Display result
         status = result["current_status"]["status"]
-        icon = "✅" if status == "SAFE" else "⚠️" if status == "CAUTION" else "❌"
+        icon = "OK" if status == "SAFE" else "WARN" if status == "CAUTION" else "FAIL"
         
         lines = [
             f"Course: {course_code} - {course_name}",
@@ -165,7 +165,7 @@ def run_attendance_calculator(vtop_data: Dict) -> List[Dict]:
         ]
         
         for scenario in result["scenarios"][:6]:  # Show first 6 scenarios
-            safe_icon = "✅" if scenario["safe"] else "❌"
+            safe_icon = "OK" if scenario["safe"] else "FAIL"
             lines.append(
                 f"  {safe_icon} Skip {scenario['skip']}: {scenario['final_percentage']}%"
             )
@@ -193,7 +193,7 @@ if __name__ == "__main__":
     results = run_attendance_calculator(vtop_data)
     
     if not results:
-        print("❌ No attendance data available for analysis")
+        print("FAIL No attendance data available for analysis")
 
 
 __all__ = ["calculate_attendance_buffer", "run_attendance_calculator"]

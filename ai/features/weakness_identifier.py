@@ -166,17 +166,17 @@ def generate_improvement_plan(
     
     # Performance-based actions
     if performance_level == "CRITICAL":
-        actions.append("🚨 URGENT: Immediate intervention required")
+        actions.append("URGENT: Immediate intervention required")
         actions.append("   • Schedule meeting with professor")
         actions.append("   • Join peer tutoring sessions")
         actions.append("   • Allocate 2-3 hours daily for this subject")
     elif performance_level == "WEAK":
-        actions.append("⚠️  Focus on fundamentals")
+        actions.append("WARNING:  Focus on fundamentals")
         actions.append("   • Review class notes thoroughly")
         actions.append("   • Solve previous year questions")
         actions.append("   • Attend office hours for doubts")
     elif performance_level == "AVERAGE":
-        actions.append("📚 Room for improvement")
+        actions.append("INFO: Room for improvement")
         actions.append("   • Practice more problems")
         actions.append("   • Focus on weak topics")
     
@@ -186,23 +186,23 @@ def generate_improvement_plan(
     
     # Attendance-based actions
     if attendance_percent < 75:
-        actions.append("🚨 Attendance below requirement (75%)")
+        actions.append("URGENT: Attendance below requirement (75%)")
         actions.append("   • Must attend all remaining classes")
     elif attendance_percent < 85:
-        actions.append("⚠️  Attendance needs improvement")
+        actions.append("WARNING:  Attendance needs improvement")
         actions.append("   • Aim for 90%+ attendance")
     
     # Subject-type specific actions
     if subject_type == "LAB":
-        actions.append("💻 Lab subject tips:")
+        actions.append("LAB Lab subject tips:")
         actions.append("   • Complete all experiments on time")
         actions.append("   • Understand code, don't just copy")
     elif subject_type == "MATH":
-        actions.append("📐 Math subject tips:")
+        actions.append("MATH Math subject tips:")
         actions.append("   • Practice derivations daily")
         actions.append("   • Solve theorem proofs multiple times")
     elif subject_type == "CORE":
-        actions.append("🎯 Core subject tips:")
+        actions.append("TARGET: Core subject tips:")
         actions.append("   • Focus on conceptual understanding")
         actions.append("   • Relate concepts to real applications")
     
@@ -225,7 +225,7 @@ def run_weakness_identifier(vtop_data: Dict) -> Dict:
     attendance = vtop_data.get("attendance", [])
     
     if not marks:
-        print("  ℹ️  No course data found")
+        print("  INFO:  No course data found")
         return {}
     
     # Build course analysis
@@ -325,19 +325,19 @@ def run_weakness_identifier(vtop_data: Dict) -> Dict:
         by_type[subject_type].append(course)
     
     # Display analysis
-    print(f"  📊 Analyzed {len(course_analysis)} courses\n")
+    print(f"  STATS: Analyzed {len(course_analysis)} courses\n")
     
     # Show weakest courses first
     print_section("PRIORITY COURSES (Weakest First)")
     
     for i, course in enumerate(course_analysis[:5], 1):  # Top 5 weakest
         icon = {
-            "CRITICAL": "🚨",
-            "WEAK": "⚠️",
-            "AVERAGE": "📚",
-            "GOOD": "✅",
-            "EXCELLENT": "🌟"
-        }.get(course["performance_level"], "📖")
+            "CRITICAL": "URGENT:",
+            "WEAK": "WARNING:",
+            "AVERAGE": "INFO:",
+            "GOOD": "OK",
+            "EXCELLENT": "EXCELLENT"
+        }.get(course["performance_level"], "INFO")
         
         lines = [
             f"Rank: #{i} (Performance Score: {course['performance_score']}/100)",
@@ -354,7 +354,7 @@ def run_weakness_identifier(vtop_data: Dict) -> Dict:
         
         if course["weak_components"]:
             lines.append("")
-            lines.append("⚠️  Weak Components:")
+            lines.append("WARNING:  Weak Components:")
             for comp in course["weak_components"]:
                 lines.append(f"  • {comp}")
         
@@ -368,10 +368,10 @@ def run_weakness_identifier(vtop_data: Dict) -> Dict:
         avg_score = sum(c["performance_score"] for c in courses) / len(courses)
         weak_count = sum(1 for c in courses if c["performance_level"] in ["WEAK", "CRITICAL"])
         
-        print(f"  📂 {subject_type}: {len(courses)} course(s)")
+        print(f"  FOLDER {subject_type}: {len(courses)} course(s)")
         print(f"     Average Score: {avg_score:.1f}/100")
         if weak_count > 0:
-            print(f"     ⚠️  {weak_count} course(s) need attention")
+            print(f"     WARNING:  {weak_count} course(s) need attention")
         print()
     
     # Generate improvement plans
@@ -386,7 +386,7 @@ def run_weakness_identifier(vtop_data: Dict) -> Dict:
                 course["subject_type"]
             )
             
-            print(f"  📘 {course['course_code']} - {course['course_name']}")
+            print(f"  COURSE {course['course_code']} - {course['course_name']}")
             for action in actions:
                 print(f"  {action}")
             print()
@@ -416,4 +416,4 @@ if __name__ == "__main__":
     result = run_weakness_identifier(vtop_data)
     
     if not result or result['total_courses'] == 0:
-        print("❌ No courses available for weakness analysis")
+        print("FAIL No courses available for weakness analysis")

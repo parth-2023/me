@@ -95,16 +95,16 @@ def calculate_exam_readiness(
     # Status
     if readiness_score >= 80:
         status = "EXCELLENT"
-        color = "🟢"
+        color = "GREEN"
     elif readiness_score >= 60:
         status = "GOOD"
-        color = "🟡"
+        color = "YELLOW"
     elif readiness_score >= 40:
         status = "MODERATE"
         color = "🟠"
     else:
         status = "POOR"
-        color = "🔴"
+        color = "RED"
     
     # Recommendations based on readiness
     recommendations = []
@@ -165,7 +165,7 @@ def run_exam_readiness(vtop_data: Dict) -> List[Dict]:
     exams = vtop_data.get("exams", [])
     
     if not exams:
-        print("  ℹ️  No exam schedule data available")
+        print("  INFO:  No exam schedule data available")
         return []
     
     # Create lookup dictionaries
@@ -189,7 +189,7 @@ def run_exam_readiness(vtop_data: Dict) -> List[Dict]:
             continue
     
     if not upcoming_exams:
-        print("  ℹ️  No exams in the next 30 days")
+        print("  INFO:  No exams in the next 30 days")
         return []
     
     print(f"  📅 Found {len(upcoming_exams)} upcoming exams\n")
@@ -217,8 +217,8 @@ def run_exam_readiness(vtop_data: Dict) -> List[Dict]:
             f"Status: {result['color']} {result['status']}",
             "",
             "Factors:",
-            f"  📚 Marks Strength: {result['factors']['marks_strength']}/100",
-            f"  📊 Attendance Safety: {result['factors']['attendance_safety']}/100",
+            f"  INFO: Marks Strength: {result['factors']['marks_strength']}/100",
+            f"  STATS: Attendance Safety: {result['factors']['attendance_safety']}/100",
             f"  ⏰ Time Available: {result['factors']['time_available']}/100",
             "",
             "Recommendations:"
@@ -249,7 +249,7 @@ if __name__ == "__main__":
     results = run_exam_readiness(vtop_data)
     
     if not results:
-        print("❌ No exam readiness data available")
+        print("FAIL No exam readiness data available")
 
 
 __all__ = ["calculate_exam_readiness", "run_exam_readiness"]

@@ -42,8 +42,8 @@ ENABLE_PERFORMANCE_INSIGHTS = True
 
 # Display configuration
 if GOOGLE_API_KEY:
-    print(f"✅ AI Configuration loaded")
+    print("OK AI Configuration loaded")
     print(f"   Model: {GEMINI_MODEL}")
-    print(f"   API Key: ✓ Set")
+    print("   API Key: Set")
     print(f"   Output Directory: {OUTPUT_DIR}")
     print()

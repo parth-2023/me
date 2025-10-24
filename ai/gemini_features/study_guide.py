@@ -79,7 +79,7 @@ def generate_study_guide(subject_name, subject_marks, syllabus_content, vtop_dat
     """Generate personalized study guide using Gemini"""
     
     if not GOOGLE_API_KEY:
-        return "❌ Error: GOOGLE_API_KEY not configured. Please set it in .env file."
+        return "FAIL Error: GOOGLE_API_KEY not configured. Please set it in .env file."
     
     # Configure Gemini
     genai.configure(api_key=GOOGLE_API_KEY)
@@ -172,7 +172,7 @@ Make it actionable, specific to VIT's exam patterns, and encouraging. The studen
         return response.text
     
     except Exception as e:
-        return f"❌ Error generating study guide: {str(e)}"
+        return f"FAIL Error generating study guide: {str(e)}"
 
 
 def main():
@@ -185,7 +185,7 @@ def main():
     subject_name = sys.argv[2]
     
     if not Path(vtop_file).exists():
-        print(f"❌ Error: File not found: {vtop_file}")
+        print(f"FAIL Error: File not found: {vtop_file}")
         sys.exit(1)
     
     print("="*80)
@@ -201,14 +201,14 @@ def main():
     subject_marks = find_subject_marks(vtop_data, subject_name)
     
     if not subject_marks:
-        print(f"⚠️  Warning: Could not find exact match for '{subject_name}'")
+        print(f"WARNING: Could not find exact match for '{subject_name}'")
         print("   Available courses:")
         for course in vtop_data.get('marks', []):
             print(f"     - {course.get('course_name', '')} ({course.get('course_code', '')})")
         print()
     
     # Search for syllabus
-    print("📚 Fetching VIT syllabus information...")
+    print("INFO: Fetching VIT syllabus information...")
     syllabus_content = search_vit_syllabus(subject_name)
     print()
     
@@ -234,7 +234,7 @@ def main():
         f.write("* Always refer to official VIT syllabus for accurate information.\n")
         f.write("="*80 + "\n")
     
-    print(f"✓ Study guide saved to: {output_file}")
+    print(f"OK Study guide saved to: {output_file}")
     print()
 
 

@@ -169,19 +169,19 @@ def generate_study_plan(allocations: List[Dict]) -> List[str]:
         
         if urgency == "CRITICAL":
             recommendations.append(
-                f"🚨 {course}: URGENT - {weekly}h/week ({daily}h/day). Focus on basics, practice problems, seek help."
+                f"URGENT: {course}: URGENT - {weekly}h/week ({daily}h/day). Focus on basics, practice problems, seek help."
             )
         elif urgency == "HIGH":
             recommendations.append(
-                f"⚠️  {course}: HIGH - {weekly}h/week ({daily}h/day). Review lecture notes, solve assignments, attend doubt sessions."
+                f"WARNING:  {course}: HIGH - {weekly}h/week ({daily}h/day). Review lecture notes, solve assignments, attend doubt sessions."
             )
         elif urgency == "MEDIUM":
             recommendations.append(
-                f"📚 {course}: MEDIUM - {weekly}h/week ({daily}h/day). Stay current with lectures, complete assignments on time."
+                f"INFO: {course}: MEDIUM - {weekly}h/week ({daily}h/day). Stay current with lectures, complete assignments on time."
             )
         else:
             recommendations.append(
-                f"✅ {course}: LOW - {weekly}h/week ({daily}h/day). Maintain pace, explore advanced topics."
+                f"OK {course}: LOW - {weekly}h/week ({daily}h/day). Maintain pace, explore advanced topics."
             )
     
     return recommendations
@@ -204,7 +204,7 @@ def run_study_allocator(vtop_data: Dict, total_hours: int = 40) -> List[Dict]:
     attendance = vtop_data.get("attendance", [])
     
     if not marks:
-        print("  ℹ️  No course data found")
+        print("  INFO:  No course data found")
         return []
     
     # Build course data
@@ -233,19 +233,19 @@ def run_study_allocator(vtop_data: Dict, total_hours: int = 40) -> List[Dict]:
     allocations = allocate_study_time(courses, total_hours)
     
     if not allocations:
-        print("  ℹ️  No allocations generated")
+        print("  INFO:  No allocations generated")
         return []
     
-    print(f"  📊 Study time allocated across {len(allocations)} courses\n")
+    print(f"  STATS: Study time allocated across {len(allocations)} courses\n")
     
     # Display allocations
     for alloc in allocations:
         icon = {
-            "CRITICAL": "🚨",
-            "HIGH": "⚠️",
-            "MEDIUM": "📚",
-            "LOW": "✅"
-        }.get(alloc["urgency"], "📖")
+            "CRITICAL": "URGENT:",
+            "HIGH": "WARNING:",
+            "MEDIUM": "INFO:",
+            "LOW": "OK"
+        }.get(alloc["urgency"], "INFO")
         
         lines = [
             f"Priority Score: {alloc['priority']}/100",
@@ -290,4 +290,4 @@ if __name__ == "__main__":
     allocations = run_study_allocator(vtop_data)
     
     if not allocations:
-        print("❌ No courses available for study allocation")
+        print("FAIL No courses available for study allocation")

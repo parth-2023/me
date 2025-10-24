@@ -10,9 +10,9 @@ def print_header(text: str) -> None:
 
 def print_section(text: str) -> None:
     """Print a section header."""
-    print(f"\n{'─' * 80}")
+    print(f"\n{'-' * 80}")
     print(f"  {text}")
-    print('─' * 80)
+    print('-' * 80)
 
 
 def print_result(text: str) -> None:
@@ -33,14 +33,14 @@ def format_table_row(columns: list, widths: list) -> str:
 def print_box(title: str, lines: list) -> None:
     """Print content in a box."""
     max_width = max(len(line) for line in [title] + lines)
-    border = "═" * (max_width + 4)
+    border = "=" * (max_width + 4)
     
-    print(f"╔{border}╗")
-    print(f"║  {title.ljust(max_width)}  ║")
-    print(f"╠{border}╣")
+    print(f"+{border}+")
+    print(f"|  {title.ljust(max_width)}  |")
+    print(f"+{border}+")
     for line in lines:
-        print(f"║  {line.ljust(max_width)}  ║")
-    print(f"╚{border}╝")
+        print(f"|  {line.ljust(max_width)}  |")
+    print(f"+{border}+")
 
 
 __all__ = [
